@@ -1,6 +1,6 @@
-# Lab - Class 03
+# Lab - Class 02
 
-## Project: Basic API Server
+## Project: Basic Express Server
 
 ### Author: Julian Barker
 
@@ -10,8 +10,8 @@ This repo is an exercise in creating and deploying an Express server. It include
 
 ### Links and Resources
 
-- [ci/cd](https://github.com/julian-barker/basic-API-server/actions)
-- [deployment](https://four01-basic-API-server.onrender.com)
+- [ci/cd](https://github.com/julian-barker/basic-express-server/actions)
+- [deployment](https://four01-basic-express-server.onrender.com)
 
 ### Setup
 
