@@ -6,7 +6,7 @@
 
 ### Problem Domain  
 
-This repo is an exercise in creating and deploying an Express server. It includes basic testing, error handling, and middleware.
+This repo is an exercise in creating and deploying an Express server and connecting to a SQL database. It uses a local and deployed instance of a postgres database for development and production as well as a sqlite in-memory database for testing. It implements all CRUD operations as router middleware.
 
 ### Links and Resources
 
@@ -18,6 +18,7 @@ This repo is an exercise in creating and deploying an Express server. It include
 #### `.env` requirements (where applicable)
 
 - `PORT` - 3001
+- `DATABASE_URL` - postgres://localhost:5432/\<database-name\>?sslmode=disable
 
 #### How to initialize/run your application (where applicable)
 
@@ -26,20 +27,18 @@ This repo is an exercise in creating and deploying an Express server. It include
 #### Features / Routes
 
 - GET : `/` - return "We're live!!!"
-- GET : `/person` - 500 error
-- GET : `/person:name` - 'H3ll0, *name*'
-- GET : `/bad` - 500 error
-- GET : `*` - 404 error
+- GET : `/clothes` - gets all records from the clothes table
+- GET : `/clothes/:id` - gets a single record by id
+- POST : `/clothes` - inserts a new record; takes an object in the request body as fields to populate
+- PUT : `/clothes/:id` - updates a single record by id; takes an object in the request body as fields to be updated
+- DELETE : `/clothes/:id` - deletes a single record by id
 
 #### Tests
 
-- npm test
+- `npm test` (alias for `NODE_ENV=test npx tsc && jest --verbose --coverage`)
 
 #### UML
 
-![UML](./assets/401_lab_2_UML.png)
+![UML](./assets/401_lab_3_UML.png)
 
 ### Attributions
-
-- Info on build and dev commands with TS was received from [this LogRocket Blog Post](https://blog.logrocket.com/how-to-set-up-node-typescript-express/)
-- Info on express types recieved from official [GitHub repo](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/express/index.d.ts)
