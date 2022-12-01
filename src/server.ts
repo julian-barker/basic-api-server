@@ -3,8 +3,6 @@
 import express, { Express, Request, Response, NextFunction } from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import logger from './middleware/logger';
-// import validator from './middleware/validator';
 import notFound from './handlers/404';
 import serverErr from './handlers/500';
 import { clothesRouter, foodRouter } from './routes'
